@@ -31,6 +31,7 @@ public class Test_Classes {
 		ClassC c = new ClassC(1,2,3);
 		
 		assertTrue(c.getB() == 2);
+		assertTrue(c.getA() == 1);
 		
 	}
 

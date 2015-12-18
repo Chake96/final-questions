@@ -4,10 +4,13 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
 
+import QuestionA.iPersonRead;
+import QuestionA.iPersonReadWrite;
+
 /*
  * comment
  */
-public abstract class Person {
+public abstract class Person implements iPersonRead, iPersonReadWrite {
 
 	private UUID PersonID;
 	private Date DOB;
@@ -22,12 +25,12 @@ public abstract class Person {
 		return PersonID;
 	}
 
-	private void setPersonID(UUID personID) {
-		PersonID = UUID.randomUUID();
+	public void setPersonID(UUID personID) {
+		this.PersonID = UUID.randomUUID();
 	}
 
 	public String getFirstName() {
-		return FirstName;
+		return this.FirstName;
 	}
 
 	public void setFirstName(String FirstName) {
@@ -35,7 +38,7 @@ public abstract class Person {
 	}
 
 	public String getMiddleName() {
-		return MiddleName;
+		return this.MiddleName;
 	}
 
 	public void setMiddleName(String MiddleName) {
@@ -43,7 +46,7 @@ public abstract class Person {
 	}
 
 	public String getLastName() {
-		return LastName;
+		return this.LastName;
 	}
 
 	public void setLastName(String LastName) {
@@ -51,7 +54,7 @@ public abstract class Person {
 	}
 
 	public Date getDOB() {
-		return DOB;
+		return this.DOB;
 	}
 
 	public void setDOB(Date DOB) {
@@ -59,27 +62,27 @@ public abstract class Person {
 	}
 
 	public void setAddress(String newAddress) {
-		address = newAddress;
+		this.address = newAddress;
 	}
 
 	public String getAddress() {
-		return address;
+		return this.address;
 	}
 
 	public void setPhone(String newPhone_number) {
-		phone_number = newPhone_number;
+		this.phone_number = newPhone_number;
 	}
 
 	public String getPhone() {
-		return phone_number;
+		return this.phone_number;
 	}
 
 	public void setEmail(String newEmail) {
-		email_address = newEmail;
+		this.email_address = newEmail;
 	}
 
 	public String getEmail() {
-		return email_address;
+		return this.email_address;
 	}
 
 	/*
@@ -89,13 +92,15 @@ public abstract class Person {
 
 	}
 
+	
+	
 	/*
 	 * Constructors Constructor with arguments
 	 */
 
 	public Person(String FirstName, String MiddleName, String LastName,
 			Date DOB, String Address, String Phone_number, String Email) {
-		this.setPersonID();
+		//this.setPersonID();
 		this.FirstName = FirstName;
 		this.MiddleName = MiddleName;
 		this.LastName = LastName;

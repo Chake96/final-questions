@@ -32,4 +32,9 @@ public class Student extends Person {
 	{
 		super.PrintName();
 	}
+	@Override
+	public void setDate(Date date) {
+		// TODO Auto-generated method stub
+		
+	}
 }

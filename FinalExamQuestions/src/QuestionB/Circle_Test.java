@@ -36,6 +36,7 @@ public class Circle_Test {
 		
 		assertTrue(c1.getRadius() == r);
 		assertTrue(c2.getRadius() == r);
+		
 	}
 
 }
